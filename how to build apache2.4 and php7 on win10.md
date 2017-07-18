@@ -4,7 +4,9 @@
 - [php7.1.7 vc14 x64 non thread Safe](http://windows.php.net/downloads/releases/php-7.1.7-nts-Win32-VC14-x64.zip)
 - [apache2.4 vc14 x64](https://www.apachelounge.com/download/VC14/binaries/httpd-2.4.27-win64-VC14.zip)
 - [mod_fcgid vc14 x64](https://www.apachelounge.com/download/VC14/modules/mod_fcgid-2.3.9-win64-VC14.zip)
+
 ##steps
+
 ######suppose my root directory is d:/webservice
 1. unzip httpd-2.4.27-win64-VC14.zip and copy the Apache24 directory to d:/webservice
 2. unzip php-7.1.7-nts-Win32-VC14-x64.zip and copy it to d:/webservice, then rename the directory to php
@@ -37,5 +39,6 @@ FcgidInitialEnv PHP_FCGI_MAX_REQUESTS 1000
 10. cd d:/webservice/Apache24/htdocs, create a new php file with content '<?php phpinfo(); ?>', named 'index.php'
 11. open your browser, and access 127.0.0.1/index.php, you will see the php settings
 12. it`s over
+
 ##remind
 if you add a new virtualhost, add 'Options +ExecCGI' to it; if not you will get 403 forbidden error
